@@ -1,0 +1,36 @@
+
+<div class="container emp-profile">
+  <div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+      <h1 class="margin-top-4">Create an event</h1>
+      <%= form_for(@event, url: yield(:url)) do |f| %>
+      <%= render 'shared/errors', object: @event %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label :event_date %>
+        <%= f.datetime_select :event_date, class: 'form-control' %>
+        <br>
+
+        <%= f.label :description %>
+        <%= f.text_field :description, class: 'form-control' %>
+
+        <%= f.label :location %>
+        <%= f.text_field :location, class: 'form-control' %>
+
+        <%= f.label :category %>
+        <%= f.text_field :category, class: 'form-control' %>
+
+        <%= f.submit "Create an event", class: "btn btn-primary margin-top-4" %>
+      <% end %>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+
+</div>

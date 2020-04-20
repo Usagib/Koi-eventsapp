@@ -1,0 +1,5 @@
+test_event:
+  name: test_event_1
+  description: Test_event_description
+  event_date: 2020-03-25 12:30PM
+  user_id: 1

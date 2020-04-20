@@ -1,0 +1,28 @@
+<div class="container posts-new">
+  <div class="row">
+
+  </div>
+</div>
+
+<div class="container emp-profile">
+  <div class="row">
+    <div class="col-lg-8 bg-e">
+
+    </div>
+    <div class="col-lg-4">
+      <h3>created by: <%= @event.user.username %></h3>
+      <h1><%= @event.name %></h1>
+      <h3><%= @event.event_date %></h3>
+      <h3><%= @event.location %></h3>
+      <h4><%= @event.description %></h4>
+
+      <% if @event.upcoming? %>
+        <% unless @event.attendees.include?(current_user) %>
+          <%= link_to  'Attend', schedule_event_event_path(@event), class: "btn btn-primary", method: :post%>
+        <% else %>
+          <%= link_to  'Cancel attendance', remove_event_event_path(@event), class: "btn btn-danger", method: :post%>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container-fluid">
+
+    <div class="col-lg-6 emp-profile">
+      <h1 class="jumbotron text-center spartan-font-bold">Upcoming Events</h1>
+
+
+      <% @upcoming.each do |upcoming| %>
+        <div class="conatiner event-container">
+          <div class="row event-first-row">
+            <div class="col-lg-6 text-center event-bg">
+
+            </div>
+            <div class="col-lg-6 event-title">
+              <h1 class="spartan-font"><%= link_to upcoming.name, event_path(upcoming) %></h1>
+              <h3><%= upcoming.event_date %></h3>
+            </div>
+          </div>
+          <div class="row event-description">
+              <h4 class="spartan-font">  <%= upcoming.description %></h4>
+              <h4>At:  <%= upcoming.location %></h4>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-lg-6 emp-profile">
+      <h1 class="jumbotron text-center spartan-font-bold">Past Events</h1>
+
+
+      <% @past.each do |past| %>
+        <div class="conatiner event-container">
+          <div class="row event-first-row">
+            <div class="col-lg-6 text-center event-bg">
+
+            </div>
+            <div class="col-lg-6 event-title">
+              <h1 class="spartan-font"><%= link_to past.name, event_path(past) %></h1>
+              <h3><%= past.event_date %></h3>
+            </div>
+          </div>
+          <div class="row event-description">
+              <h4 class="spartan-font">  <%= past.description %></h4>
+              <h4>At:  <%= past.location %></h4>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+</div>

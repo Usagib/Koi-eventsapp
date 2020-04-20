@@ -1,0 +1,45 @@
+<div class="container emp-profile">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="profile-img">
+        <img src="https://picsum.photos/150/100" alt=""/>
+        </div>
+      </div>
+
+    <div class="col-md-6">
+      <div class="profile-head">
+        <h2>Welcome <%= @user.username %></h2>
+        <h4> <%= @user.email %></h4>
+        <p class="proile-rating">Created events: <%= @user.events.count %> / Upcoming events: <%= @user.events.count %></p>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Created events</h1>
+      <% @user.events.each do |event| %>
+            <h3><%= event.name %></h3>
+            <p><%= event.description %></p>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <h1>Events to attend</h1>
+      <% @user.scheduled_events.upcoming.each do |scheduled| %>
+            <h3><%= scheduled.name %></h3>
+            <p><%= scheduled.description %></p>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <h1>Past events</h1>
+      <% @user.scheduled_events.past.each do |scheduled| %>
+            <h3><%= scheduled.name %></h3>
+            <p><%= scheduled.description %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

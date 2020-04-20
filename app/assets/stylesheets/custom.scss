@@ -1,0 +1,366 @@
+/*app/assets/stylesheets/custom.scss*/
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap');
+
+
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: 0.75rem;
+}
+
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bannertext{
+  color: white;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  color: white;
+  margin-top: 100px;
+}
+
+.spartan-font-bold {
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+}
+
+.spartan-font {
+  font-family: 'Spartan', sans-serif;
+}
+
+.error-messages {
+  position: absolute;
+  left: 1%;
+  margin-top: 1%;
+}
+
+.bannersubtext{
+  color: white;
+  font-family: 'Spartan', sans-serif;
+  font-size: 50px;
+}
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-banner {
+  height: 500px;
+  text-align: center;
+}
+
+.event-bg {
+  background-image: url("banner.jpg");
+  background-size: cover;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+}
+
+.event-first-row {
+  margin-bottom: 10px;
+}
+
+.event-title {
+  margin-top: -20px;
+}
+
+.event-description {
+  background-color: firebrick;
+  color: white;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+
+.event-container {
+  margin-bottom: 30px;
+}
+
+.bg-image {
+  background-image: url("banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-e {
+  background-image: url("banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.bg-image2 {
+  background-image: url("loginimg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.sessions-new, .static-home {
+  margin-top: 50px;
+  height: auto;
+}
+
+.posts-board, .posts-new {
+  margin-top: 50px;
+}
+
+.login-heading {
+  font-weight: 300;
+}
+
+.leftimg {
+  height: 690px;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  border-radius: 2rem;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.logininput, .loginlabel {
+  padding: var(--input-padding-y) var(--input-padding-x);
+  height: auto;
+  border-radius: 2rem;
+  width: auto;
+}
+
+.loginlabel {
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.help-p {
+  &:first-of-type {
+    margin-top: 6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  &:last-of-type{
+    margin-bottom: 4rem;
+  }
+  font-size: 1.8rem;
+}
+
+.list-group {
+  margin-bottom: 4rem;
+}
+
+.list-group-item {
+  font-size: 1.6rem;
+  .console-text {
+    font-family: monospace;
+    color: black;
+  }
+}
+
+.italic {
+  font-size: 2.5rem;
+  font-style: italic;
+  margin-bottom: 4rem;
+}
+
+.new_user_container {
+  margin-top: 10rem;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.margin-field {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.margin-top-4 {
+  margin-top: 4rem;
+}
+
+.bordered {
+  border: 1px solid black;
+}
+
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+body{
+  background: linear-gradient(90deg, rgba(180,58,58,1) 0%, rgba(253,29,29,1) 75%, rgba(0,0,0,1) 100%);
+}
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+
+.whitetext{
+  color: mintcream;
+}
+
+
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
